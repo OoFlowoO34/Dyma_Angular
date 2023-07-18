@@ -8,6 +8,8 @@ import { Cocktail } from 'src/app/shared/interfaces/cocktail.interface';
 })
 export class CocktailListComponent implements OnInit {
   @Input() public cocktails: Cocktail[];
+  @Input() public selectedCocktail: Cocktail;
+
   @Output() private changeCocktail: EventEmitter<number> = new EventEmitter();
   constructor() {}
   ngOnInit(): void {

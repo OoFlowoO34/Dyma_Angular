@@ -106,6 +106,17 @@ body {
 
 //theme
 
+.list-primary-action {
+  li {
+    &:hover {
+      background-color: var(--primary);
+      color: white;
+      cursor: pointer;
+    }
+    transition: background-color 0.4s;
+  }
+}
+
 .list-primary {
   li {
     padding: 10px 15px;
@@ -120,12 +131,6 @@ body {
       border-bottom-left-radius: 3px;
       border-bottom-right-radius: 3px;
     }
-    &:hover {
-      background-color: var(--primary);
-      color: white;
-      cursor: pointer;
-    }
-    transition: all 0.4s;
   }
 }
 
@@ -144,6 +149,15 @@ body {
     }
     transition: background-color 0.4s;
   }
+}
+
+.badge {
+  background-color: var(--secondary);
+  border-radius: 3px;
+  padding: 2px 5px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 //debug
