@@ -1,20 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 ul {
   list-style: none;
 }
+
 img {
   max-width: 100%;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 :root {
   --font-family: "Roboto", sans-serif;
   --primary: #546de5;
@@ -29,8 +32,6 @@ body {
   color: var(--text-regular);
 }
 
-//layout
-
 .container {
   max-width: 1200px;
   display: block;
@@ -40,9 +41,11 @@ body {
 .d-flex {
   display: flex;
 }
+
 .flex-row {
   flex-direction: row;
 }
+
 .flex-column {
   flex-direction: column;
 }
@@ -70,7 +73,6 @@ body {
 .flex-50 {
   flex: 1 1 50%;
 }
-//util
 
 .p-10 {
   padding: 10px;
@@ -104,34 +106,28 @@ body {
   margin-top: 20px;
 }
 
-//theme
-
-.list-primary-action {
-  li {
-    &:hover {
-      background-color: var(--primary);
-      color: white;
-      cursor: pointer;
-    }
-    transition: background-color 0.4s;
-  }
+.list-primary-action li {
+  transition: background-color 0.4s;
+}
+.list-primary-action li:hover {
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
 }
 
-.list-primary {
-  li {
-    padding: 10px 15px;
-    border: 1px solid var(--lightgrey);
-    border-top: 0px;
-    &:first-child {
-      border-top: 1px solid var(--lightgrey);
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
-    }
-    &:last-child {
-      border-bottom-left-radius: 3px;
-      border-bottom-right-radius: 3px;
-    }
-  }
+.list-primary li {
+  padding: 10px 15px;
+  border: 1px solid var(--lightgrey);
+  border-top: 0px;
+}
+.list-primary li:first-child {
+  border-top: 1px solid var(--lightgrey);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.list-primary li:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .btn {
@@ -141,14 +137,14 @@ body {
   border-radius: 3px;
   font-weight: 700;
   cursor: pointer;
-  &-primary {
-    background-color: var(--primary);
-    color: white;
-    &:hover {
-      background-color: var(--secondary);
-    }
-    transition: background-color 0.4s;
-  }
+}
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  transition: background-color 0.4s;
+}
+.btn-primary:hover {
+  background-color: var(--secondary);
 }
 
 .badge {
@@ -165,11 +161,10 @@ body {
   color: white;
 }
 
-//debug
 .d1 {
   border: solid red 1px;
 }
 
 .d2 {
   border: solid green 1px;
-}
+}/*# sourceMappingURL=styles.css.map */
