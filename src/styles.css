@@ -18,6 +18,22 @@ a {
   color: inherit;
 }
 
+input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 8px 15px;
+}
+
+hr {
+  margin: 20px 0px;
+  border-top: 1px solid #ddd;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 :root {
   --font-family: "Roboto", sans-serif;
   --primary: #546de5;
@@ -145,6 +161,14 @@ body {
 }
 .btn-primary:hover {
   background-color: var(--secondary);
+}
+.btn-secondary {
+  background-color: rgb(255, 136, 0);
+  color: white;
+  transition: background-color 0.4s;
+}
+.btn-secondary:hover {
+  background-color: rgba(255, 136, 0, 0.75);
 }
 
 .badge {
