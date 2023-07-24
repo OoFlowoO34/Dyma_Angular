@@ -6,7 +6,7 @@ import { ExercicesContainerComponent } from './exercices-container/exercices-con
 import { PanierContainerComponent } from './panier-container/panier-container.component';
 
 export const APP_ROUTES: Routes = [
-  { path: '', redirectTo: 'cocktail', pathMatch: 'full' },
+  { path: '', redirectTo: 'cocktails', pathMatch: 'full' },
   {
     path: 'cocktails',
     component: CocktailContainerComponent,

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 // components
 import { AppComponent } from './app.component';
@@ -15,12 +16,15 @@ import { CocktailDetailsComponent } from './cocktail-container/cocktail-details/
 import { SelectedDirective } from './shared/directives/selected.directive';
 import { PanierContainerComponent } from './panier-container/panier-container.component';
 import { IngredientListComponent } from './panier-container/ingredient-list/ingredient-list.component';
+import { CocktailFormComponent } from './cocktail-container/cocktail-form/cocktail-form.component';
+
+//pipes
 
 // routes
 
 import { APP_ROUTES } from './app.routes';
 import { ExercicesContainerComponent } from './exercices-container/exercices-container.component';
-import { CocktailFormComponent } from './cocktail-container/cocktail-form/cocktail-form.component';
+import { FilterPipe } from './shared/pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -34,10 +38,12 @@ import { CocktailFormComponent } from './cocktail-container/cocktail-form/cockta
     IngredientListComponent,
     ExercicesContainerComponent,
     CocktailFormComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     NgOptimizedImage,
     RouterModule.forRoot(APP_ROUTES),
     ReactiveFormsModule,
