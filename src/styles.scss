@@ -190,6 +190,14 @@ body {
     }
     transition: background-color 0.4s;
   }
+  &-valid {
+    background-color: green;
+    color: white;
+    &:hover {
+      background-color: rgba(0, 128, 0, 0.75);
+    }
+    transition: background-color 0.4s;
+  }
 }
 
 .badge {

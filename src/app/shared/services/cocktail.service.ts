@@ -1,4 +1,4 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, filter, map, Observable, tap } from 'rxjs';
 import { Cocktail } from '../interfaces/cocktail.interface';
@@ -27,8 +27,6 @@ export class CocktailService {
           this.cocktails$.next([...value, savedCocktail]);
         })
       );
-    // const value = this.cocktails$.value;
-    // this.cocktails$.next([...value, cocktail]);
   }
 
   public addThreeCocktails() {
@@ -112,8 +110,13 @@ export class CocktailService {
           },
         ],
       })
+      .pipe(
+        tap((savedCocktail: Cocktail) => {
+          const value = this.cocktails$.value;
+          this.cocktails$.next([...value, savedCocktail]);
+        })
+      )
       .subscribe();
-
     this.http
       .post('https://restapi.fr/api/cocktails34f', {
         name: 'Cuba libre',
@@ -135,6 +138,12 @@ export class CocktailService {
           },
         ],
       })
+      .pipe(
+        tap((savedCocktail: Cocktail) => {
+          const value = this.cocktails$.value;
+          this.cocktails$.next([...value, savedCocktail]);
+        })
+      )
       .subscribe();
 
     this.http
@@ -158,6 +167,12 @@ export class CocktailService {
           },
         ],
       })
+      .pipe(
+        tap((savedCocktail: Cocktail) => {
+          const value = this.cocktails$.value;
+          this.cocktails$.next([...value, savedCocktail]);
+        })
+      )
       .subscribe();
   }
 }
