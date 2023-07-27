@@ -1,0 +1,10 @@
+<div class="container d-flex flex-row mt-20">
+  <app-favoris-list
+    [cocktails]="cocktails$ | async"
+    class="flex-50 pr-10"
+  ></app-favoris-list>
+
+  <div class="flex-50 pr-50">
+    <router-outlet></router-outlet>
+  </div>
+</div>

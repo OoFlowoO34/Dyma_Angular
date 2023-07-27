@@ -3,6 +3,8 @@ import { CocktailContainerComponent } from './cocktail-container/cocktail-contai
 import { CocktailDetailsComponent } from './cocktail-container/cocktail-details/cocktail-details.component';
 import { CocktailFormComponent } from './cocktail-container/cocktail-form/cocktail-form.component';
 import { ExercicesContainerComponent } from './exercices-container/exercices-container.component';
+import { FavorisContainerComponent } from './favoris-container/favoris-container.component';
+import { FavorisDetailsComponent } from './favoris-container/favoris-details/favoris-details.component';
 import { PanierContainerComponent } from './panier-container/panier-container.component';
 
 export const APP_ROUTES: Routes = [
@@ -19,4 +21,12 @@ export const APP_ROUTES: Routes = [
   },
   { path: 'panier', component: PanierContainerComponent },
   { path: 'exercices', component: ExercicesContainerComponent },
+  {
+    path: 'favoris',
+    component: FavorisContainerComponent,
+    children: [
+      { path: ':index', component: FavorisDetailsComponent },
+      { path: '', redirectTo: '0', pathMatch: 'full' },
+    ],
+  },
 ];

@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 // components
 import { AppComponent } from './app.component';
-
 import { HeaderComponent } from './header/header.component';
 import { CocktailContainerComponent } from './cocktail-container/cocktail-container.component';
 import { CocktailListComponent } from './cocktail-container/cocktail-list/cocktail-list.component';
@@ -17,14 +16,16 @@ import { SelectedDirective } from './shared/directives/selected.directive';
 import { PanierContainerComponent } from './panier-container/panier-container.component';
 import { IngredientListComponent } from './panier-container/ingredient-list/ingredient-list.component';
 import { CocktailFormComponent } from './cocktail-container/cocktail-form/cocktail-form.component';
+import { FavorisContainerComponent } from './favoris-container/favoris-container.component';
 
 //pipes
+import { FilterPipe } from './shared/pipes/filter.pipe';
 
 // routes
-
 import { APP_ROUTES } from './app.routes';
 import { ExercicesContainerComponent } from './exercices-container/exercices-container.component';
-import { FilterPipe } from './shared/pipes/filter.pipe';
+import { FavorisListComponent } from './favoris-container/favoris-list/favoris-list.component';
+import { FavorisDetailsComponent } from './favoris-container/favoris-details/favoris-details.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,9 @@ import { FilterPipe } from './shared/pipes/filter.pipe';
     ExercicesContainerComponent,
     CocktailFormComponent,
     FilterPipe,
+    FavorisContainerComponent,
+    FavorisListComponent,
+    FavorisDetailsComponent,
   ],
   imports: [
     BrowserModule,
